@@ -1,0 +1,30 @@
+{
+ "manifest_version": 3,
+ "name": "求职雷达 - 智能人岗匹配与诊断",
+ "version": "1.0.0",
+ "description": "自动抓取招聘网页JD，对比本地简历，生成多维度能力雷达图与技能诊断建议。",
+ "permissions": [
+   "activeTab",
+   "storage",
+   "scripting",
+   "sidePanel"
+ ],
+ "host_permissions": [
+   "<all_urls>"
+ ],
+ "action": {
+   "default_title": "打开求职雷达",
+   "default_popup":"sidebar.html"
+ },
+ "content_scripts": [
+   {
+     "matches": [
+       "*://*.zhipin.com/*",
+       "*://*.liepin.com/*",
+       "*://*.linkedin.com/*",
+       "*://*.51job.com/*"
+     ],
+     "js": ["content.js"]
+   }
+ ]
+}
