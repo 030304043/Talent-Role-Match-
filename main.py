@@ -25,7 +25,7 @@ app.add_middleware(
 cache_db: Dict[str, Any] = {}
 
 # 填入你申请到的智谱 API Key
-API_KEY = "your own API_KEY" 
+API_KEY = "Your Own API_KEY" 
 client = ZhipuAI(api_key=API_KEY)
 
 class MatchRequest(BaseModel):
